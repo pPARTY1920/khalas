@@ -212,5 +212,5 @@ INSERT INTO menu_items (restaurant_id, name, description, price, sort_order) VAL
   (2, 'Hot Wings 5pc',       'Five spicy fried chicken wings',                    15000, 3),
   (2, 'Streetwise 2',        'Two pieces chicken with chips',                     18000, 4),
   (2, 'Coleslaw',            'Creamy coleslaw side',                               4000, 5),
-  (2, 'Pepsi 500ml',         'Ice cold Pepsi',                                     5000, 6),
+  (2, 'Pepsi 500ml',         'Ice cold Pepsi',                                     6000, 6),
   (2, 'Krushers Vanilla',    'Creamy blended vanilla drink',                       9000, 7);
