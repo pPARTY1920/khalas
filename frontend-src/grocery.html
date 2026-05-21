@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zesto Grocery</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .hero-page { padding: 100px 0 60px; background: #FAF8F3; }
+    .hero-page .section-title { color: var(--dk); }
+    .hero-page .section-sub { color: var(--mid); }
+    .grocery-search { display:flex; gap:14px; flex-wrap:wrap; margin-top:26px; }
+    .search-input { flex:1; min-width:220px; border:1px solid var(--lt2); border-radius:18px; padding:16px 18px; background:white; }
+    .search-input::placeholder { color:#ACA29C; }
+    .grocery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:32px; }
+    .grocery-card { background:white; border:1px solid var(--lt2); border-radius:24px; padding:20px; display:flex; flex-direction:column; gap:14px; box-shadow:var(--shadow); }
+    .grocery-card h3 { font-size:18px; }
+    .grocery-card p { color:var(--mid); line-height:1.65; }
+    .grocery-card button { margin-top:auto; align-self:flex-start; }
+    @media(max-width:900px){ .grocery-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M13 2L4 13h7l-1 9 10-12h-7l1-8z"/></svg></div>
+          <span class="logo-text">Zes<span>to</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="restaurant.html" class="nav-link">Restaurants</a>
+          <a href="grocery.html" class="nav-link active">Grocery</a>
+          <a href="for-business.html" class="nav-link">For Business</a>
+        </div>
+        <div class="nav-actions">
+          <a href="login (1).html" class="btn btn-ghost">Sign in</a>
+          <a href="signin.html" class="btn btn-primary">Get started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-page">
+    <div class="container">
+      <div style="max-width:760px;">
+        <div class="section-label">Grocery</div>
+        <div class="section-title">Order groceries from local stores in minutes</div>
+        <div class="section-sub">Search, compare, and checkout with the same fast delivery experience as restaurant meals.</div>
+        <div class="grocery-search">
+          <input id="grocerySearch" class="search-input" type="search" placeholder="Search for vegetables, drinks, snacks..." aria-label="Search groceries" />
+          <button id="searchBtn" class="btn btn-primary">Search</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container" style="padding:60px 0 80px;">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:16px;">
+      <div>
+        <div class="section-label">Available now</div>
+        <div class="section-title" style="font-size:30px;">Top grocery categories</div>
+      </div>
+      <a href="restaurant.html" class="link-or">View restaurants <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+    </div>
+
+    <div class="grocery-grid" id="groceryGrid">
+      <div class="grocery-card" data-label="Fresh produce"><h3>Fresh produce</h3><p>Vegetables, fruits, herbs, and daily essentials.</p><button class="btn btn-ghost">Browse</button></div>
+      <div class="grocery-card" data-label="Bakery & snacks"><h3>Bakery & snacks</h3><p>Bread, pastries, chips and light bites for quick cravings.</p><button class="btn btn-ghost">Browse</button></div>
+      <div class="grocery-card" data-label="Beverages"><h3>Beverages</h3><p>Juices, soft drinks, bottled water, coffee and tea.</p><button class="btn btn-ghost">Browse</button></div>
+      <div class="grocery-card" data-label="Household"><h3>Household</h3><p>Cleaning supplies, toiletries and everyday home essentials.</p><button class="btn btn-ghost">Browse</button></div>
+      <div class="grocery-card" data-label="Dairy & eggs"><h3>Dairy & eggs</h3><p>Milk, yogurt, cheese and fresh eggs from trusted stores.</p><button class="btn btn-ghost">Browse</button></div>
+      <div class="grocery-card" data-label="Frozen foods"><h3>Frozen foods</h3><p>Ice cream, frozen meals, and quick freezer picks.</p><button class="btn btn-ghost">Browse</button></div>
+    </div>
+  </div>
+
+  <footer class="footer" style="margin-top:auto;">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;padding-bottom:28px;">
+        <div>
+          <div class="f-brand">Zes<span>to</span></div>
+          <div class="f-tagline">Quick grocery delivery across your favorite neighborhoods.</div>
+        </div>
+        <div>
+          <div class="fc-title">Product</div>
+          <div class="f-links">
+            <a href="restaurant.html" class="f-link">Restaurants</a>
+            <a href="grocery.html" class="f-link">Grocery</a>
+          </div>
+        </div>
+        <div>
+          <div class="fc-title">Company</div>
+          <div class="f-links">
+            <a href="login (1).html" class="f-link">Sign in</a>
+            <a href="signin.html" class="f-link">Sign up</a>
+          </div>
+        </div>
+        <div>
+          <div class="fc-title">Support</div>
+          <div class="f-links">
+            <a href="#" class="f-link">Help center</a>
+            <a href="#" class="f-link">Contact us</a>
+          </div>
+        </div>
+        <div>
+          <div class="fc-title">Cities</div>
+          <div class="f-links">
+            <a href="lagos.html" class="f-link">Lagos</a>
+            <a href="nairobi.html" class="f-link">Nairobi</a>
+            <a href="kampala.html" class="f-link">Kampala</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <span class="footer-copy">© 2026 Zesto Technologies Inc. All rights reserved.</span>
+        <div class="socials">
+          <a href="#" class="soc-icon" aria-label="Instagram"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="2" width="12" height="12" rx="3.5"/><circle cx="8" cy="8" r="3"/><circle cx="11.5" cy="4.5" r=".8" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="soc-icon" aria-label="X / Twitter"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 3h12L9.5 8.5V13l-3-1.5V8.5z" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const grid = document.getElementById('groceryGrid');
+    const cards = [...grid.querySelectorAll('.grocery-card')];
+    const search = document.getElementById('grocerySearch');
+    const button = document.getElementById('searchBtn');
+
+    function filterItems() {
+      const query = search.value.toLowerCase().trim();
+      cards.forEach(card => {
+        const label = card.dataset.label.toLowerCase();
+        card.style.display = label.includes(query) || query === '' ? 'flex' : 'none';
+      });
+    }
+
+    button.addEventListener('click', filterItems);
+    search.addEventListener('keydown', event => { if (event.key === 'Enter') { event.preventDefault(); filterItems(); } });
+  </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zesto Profile</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .profile-hero { padding: 90px 0 40px; background: #FAF8F3; }
+    .profile-hero .section-title { color: var(--dk); }
+    .profile-card { display:grid; grid-template-columns:1fr 320px; gap:24px; margin-top:32px; }
+    .profile-panel, .orders-panel { background:white; border:1px solid var(--lt2); border-radius:28px; padding:28px; box-shadow:var(--shadow); }
+    .profile-panel h2, .orders-panel h2 { margin-bottom:18px; }
+    .profile-row { display:flex; justify-content:space-between; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:18px; }
+    .profile-info { display:flex; flex-direction:column; gap:6px; }
+    .profile-actions { display:flex; gap:12px; flex-wrap:wrap; }
+    .order-list { display:flex; flex-direction:column; gap:14px; }
+    .order-item { border:1px solid var(--lt2); border-radius:18px; padding:16px; }
+    .order-item h4 { margin-bottom:8px; }
+    @media(max-width:900px){ .profile-card{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M13 2L4 13h7l-1 9 10-12h-7l1-8z"/></svg></div>
+          <span class="logo-text">Zes<span>to</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="restaurant.html" class="nav-link">Restaurants</a>
+          <a href="grocery.html" class="nav-link">Grocery</a>
+          <a href="for-business.html" class="nav-link">For Business</a>
+        </div>
+        <div class="nav-actions">
+          <a href="login (1).html" class="btn btn-ghost">Sign in</a>
+          <a href="signin.html" class="btn btn-primary">Get started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="profile-hero">
+    <div class="container">
+      <div class="section-label">Account</div>
+      <div class="section-title">Your Zesto profile</div>
+      <div class="section-sub">Manage orders, saved addresses, and account settings from one place.</div>
+    </div>
+  </section>
+
+  <div class="container" style="padding:40px 0 80px;">
+    <div class="profile-card">
+      <section class="profile-panel">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;">
+          <div>
+            <div class="section-label">Welcome back</div>
+            <h2>Akira K.</h2>
+            <p style="color:var(--mid);line-height:1.8;">Your account dashboard is live. Review recent orders, saved locations, and quick access to support.</p>
+          </div>
+          <div class="profile-actions">
+            <button id="editProfile" class="btn btn-ghost">Edit profile</button>
+            <button id="signOut" class="btn btn-primary">Sign out</button>
+          </div>
+        </div>
+
+        <div class="profile-row">
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--mid);margin-bottom:8px;">Email</div>
+            <div>akira@zesto.com</div>
+          </div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--mid);margin-bottom:8px;">Phone</div>
+            <div>+256 701 234 567</div>
+          </div>
+        </div>
+
+        <div style="margin-top:28px;">
+          <div style="font-size:14px;font-weight:700;color:var(--mid);margin-bottom:12px;">Saved addresses</div>
+          <div style="display:grid;gap:12px;">
+            <div style="padding:16px;border:1px solid var(--lt2);border-radius:18px;">Home - 23 Makerere Street, Kampala</div>
+            <div style="padding:16px;border:1px solid var(--lt2);border-radius:18px;">Office - 12 Nsambya Road, Kampala</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="orders-panel">
+        <div class="section-label">Recent activity</div>
+        <h2>Latest orders</h2>
+        <div class="order-list">
+          <div class="order-item"><h4>Burger Shack</h4><p>Completed — 20 min delivery</p><span style="font-size:13px;color:var(--mid);">May 21, 2026</span></div>
+          <div class="order-item"><h4>Tokyo Bay</h4><p>Completed — 35 min delivery</p><span style="font-size:13px;color:var(--mid);">May 19, 2026</span></div>
+          <div class="order-item"><h4>Fresh Market</h4><p>Scheduled grocery delivery</p><span style="font-size:13px;color:var(--mid);">May 18, 2026</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="footer" style="margin-top:auto;">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;padding-bottom:28px;">
+        <div>
+          <div class="f-brand">Zes<span>to</span></div>
+          <div class="f-tagline">Your profile hub for orders, addresses, and account actions.</div>
+        </div>
+        <div>
+          <div class="fc-title">Product</div>
+          <div class="f-links">
+            <a href="restaurant.html" class="f-link">Restaurants</a>
+            <a href="grocery.html" class="f-link">Grocery</a>
+          </div>
+        </div>
+        <div>
+          <div class="fc-title">Company</div>
+          <div class="f-links">
+            <a href="login (1).html" class="f-link">Sign in</a>
+            <a href="signin.html" class="f-link">Sign up</a>
+          </div>
+        </div>
+        <div>
+          <div class="fc-title">Support</div>
+          <div class="f-links">
+            <a href="#" class="f-link">Help center</a>
+            <a href="#" class="f-link">Contact us</a>
+          </div>
+        </div>
+        <div>
+          <div class="fc-title">Cities</div>
+          <div class="f-links">
+            <a href="lagos.html" class="f-link">Lagos</a>
+            <a href="nairobi.html" class="f-link">Nairobi</a>
+            <a href="kampala.html" class="f-link">Kampala</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <span class="footer-copy">© 2026 Zesto Technologies Inc. All rights reserved.</span>
+        <div class="socials">
+          <a href="#" class="soc-icon" aria-label="Instagram"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="2" width="12" height="12" rx="3.5"/><circle cx="8" cy="8" r="3"/><circle cx="11.5" cy="4.5" r=".8" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="soc-icon" aria-label="X / Twitter"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 3h12L9.5 8.5V13l-3-1.5V8.5z" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('editProfile').addEventListener('click', function() {
+      alert('Profile editing is available in the next update.');
+    });
+    document.getElementById('signOut').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

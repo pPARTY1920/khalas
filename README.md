@@ -61,6 +61,24 @@ A polished food ordering web application with landing, restaurant browsing, menu
 - Stabilized menu/back-navigation behavior.
 - Documented current app flow, features, and changelog.
 
+## 🚧 Missing Link Guide — Now Resolved
+This project previously referenced several unused or placeholder destinations. The following pages are now created and linked from the app navigation:
+
+1. Functional core pages
+   - `for-business.html`: Business portal for merchant partnerships, catering, and enterprise onboarding.
+   - `grocery.html`: Grocery shopping hub with a searchable grocery category experience.
+   - `profile.html`: Account dashboard for user profile details, saved addresses, and recent orders.
+
+2. City hub pages
+   - `lagos.html`: Lagos market page with city-specific delivery highlights.
+   - `nairobi.html`: Nairobi regional destination with local restaurant and grocery access.
+   - `kampala.html`: Kampala page for local delivery coverage and nearby neighborhoods.
+
+### How the new pages are wired
+- `index.html` now routes business links to `for-business.html`, grocery cards to `grocery.html`, and city footer links to the newly created hub pages.
+- `restaurant.html` now includes `Grocery` and `For Business` navigation targets in both desktop and mobile menus.
+- `order.html` and `cart.html` profile controls now point to `profile.html` instead of being dead or nonfunctional buttons.
+
 ---
 
 ## 📋 Change Log
