@@ -76,7 +76,7 @@ CREATE TABLE menu_items (
   name          VARCHAR(150)    NOT NULL,
   description   TEXT            NULL,
   price         INT UNSIGNED    NOT NULL,  -- stored in UGX integer
-  imageUrl     VARCHAR(500)    NULL,
+  image_url     VARCHAR(500)    NULL,
   is_available  BOOLEAN         NOT NULL DEFAULT TRUE,
   sort_order    SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   created_at    DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,

@@ -567,6 +567,7 @@
     btn.innerHTML = '✓ Account created!';
     btn.style.background = '#22C55E';
     btn.disabled = true;
+    setTimeout(() => window.location.href = 'index.html', 800);
   }
 
   ['fname','lname','email','phone','password','confirm'].forEach(id => {

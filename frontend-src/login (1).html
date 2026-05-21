@@ -653,7 +653,7 @@
         <div class="logo-name">Zest<span>o</span></div>
       </div>
 
-      <a href="#" class="lf-back">
+      <a href="index.html" class="lf-back">
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 2L4 7l5 5"/></svg>
         Back to home
       </a>
@@ -774,6 +774,7 @@
       errEl.classList.remove('show');
       btn.textContent = '✓ Welcome back!';
       btn.style.background = '#22C55E';
+      setTimeout(() => window.location.href = 'index.html', 700);
     }
   }
 

@@ -18,13 +18,13 @@
     <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
   </div>
   <div class="mobile-links">
-    <a class="mobile-link" href="#">Restaurants</a>
+    <a class="mobile-link" href="restaurant.html">Restaurants</a>
     <!-- <a class="mobile-link" href="#">Grocery</a> -->
     <a class="mobile-link" href="#">For Business</a>
   </div>
   <div class="mobile-actions" style="margin-top:24px;">
-    <a href="#" class="btn btn-ghost" style="justify-content:center;padding:14px;">Sign in</a>
-    <a href="#" class="btn btn-primary" style="justify-content:center;padding:14px;border-radius:var(--r12);">Get started</a>
+    <a href="login (1).html" class="btn btn-ghost" style="justify-content:center;padding:14px;">Sign in</a>
+    <a href="signin.html" class="btn btn-primary" style="justify-content:center;padding:14px;border-radius:var(--r12);">Get started</a>
   </div>
 </div>
 
@@ -32,14 +32,14 @@
 <header class="nav">
   <div class="container">
     <nav class="nav-inner">
-      <a href="#" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <div class="logo-mark">
           <svg viewBox="0 0 24 24"><path d="M13 2L4 13h7l-1 9 10-12h-7l1-8z"/></svg>
         </div>
         <span class="logo-text">Zes<span>to</span></span>
       </a>
       <div class="nav-links">
-        <a href="#" class="nav-link active">Restaurants</a>
+        <a href="restaurant.html" class="nav-link active">Restaurants</a>
         <!-- <a href="#" class="nav-link">Grocery</a> -->
         <a href="#" class="nav-link">For Business</a>
       </div>
@@ -49,8 +49,8 @@
         <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" style="width:10px;height:10px;"><path d="M1 1l4 4 4-4"/></svg>
       </a>
       <div class="nav-actions">
-        <a href="#" class="btn btn-ghost">Sign in</a>
-        <a href="#" class="btn btn-primary">Get started</a>
+        <a href="login (1).html" class="btn btn-ghost">Sign in</a>
+        <a href="signin.html" class="btn btn-primary">Get started</a>
       </div>
       <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -134,7 +134,7 @@
       minOrder: "Min. $5",
       badge: "-20%",
       tags: ["Burgers", "Fries", "Fast food"],
-      href: "menu.html"
+      href: "order.html"
     },
     {
       id: 2,
@@ -148,7 +148,7 @@
       minOrder: "Min. $8",
       badge: null,
       tags: ["Pizza", "Pasta", "Italian"],
-      href: "menu.html"
+      href: "order.html"
     },
     {
       id: 3,
@@ -162,7 +162,7 @@
       minOrder: "Min. $12",
       badge: "Top rated",
       tags: ["Sushi", "Ramen", "Japanese"],
-      href: "menu.html"
+      href: "order.html"
     },
     {
       id: 4,
@@ -176,7 +176,7 @@
       minOrder: "Min. $5",
       badge: "-40%",
       tags: ["Chicken", "Fries", "Fast food"],
-      href: "menu.html"
+      href: "order.html"
     },
     {
       id: 5,
@@ -190,7 +190,7 @@
       minOrder: "Min. $8",
       badge: null,
       tags: ["Burgers", "Pasta", "Italian"],
-      href: "menu.html"
+      href: "order.html"
     },
     {
       id: 6,
@@ -204,7 +204,7 @@
       minOrder: "Min. $12",
       badge: "Top rated",
       tags: ["Pizza", "Fries", "Buffalo Wings"],
-      href: "menu.html"
+      href: "order.html"
     }
   ];
 
@@ -235,7 +235,7 @@
       .join("");
 
     return `
-      <a href="${escHtml(r.href || 'menu.html')}" class="r-card">
+      <a href="${escHtml(r.href || 'order.html')}" class="r-card">
         <div class="r-banner" style="background:${escHtml(r.bannerBg || '#F5F5F5')};">
           ${bannerContent}
           ${badge}
