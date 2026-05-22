@@ -92,7 +92,6 @@ a{text-decoration:none;color:inherit;}
 .story-badge{position:absolute;bottom:-20px;right:-20px;background:var(--or);color:white;border-radius:var(--r20);padding:18px 24px;box-shadow:0 8px 32px rgba(255,85,0,.35);}
 .story-badge-num{font-family:'Knewave',cursive;font-size:32px;line-height:1;}
 .story-badge-lbl{font-size:11px;font-weight:600;opacity:.85;margin-top:2px;}
-.story-content{}
 .story-content .section-title{margin-bottom:20px;}
 .story-body{font-size:15px;color:var(--mid);line-height:1.75;margin-bottom:16px;}
 .story-highlight{background:var(--or-lt);border-left:3px solid var(--or);border-radius:0 var(--r12) var(--r12) 0;padding:16px 20px;margin:28px 0;font-size:15px;color:var(--dk);font-weight:500;line-height:1.6;font-style:italic;}
