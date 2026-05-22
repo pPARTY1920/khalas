@@ -77,17 +77,17 @@
         </div>
         <h1 class="hero-h1">Everything<br>you crave,<br><em>delivered now</em></h1>
         <p class="hero-sub">From your favorite local restaurants to groceries and more — Zesto gets it to your door in under 30 minutes.</p>
-        <div class="hero-search">
+        <form class="hero-search" action="search.html" method="get">
           <a href="#" class="hs-loc">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 1.5A4.5 4.5 0 0 1 12.5 6c0 3.2-4.5 8.5-4.5 8.5S3.5 9.2 3.5 6A4.5 4.5 0 0 1 8 1.5z"/><circle cx="8" cy="6" r="1.6"/></svg>
             <span>Enter your address…</span>
           </a>
           <div class="hs-q">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5l2.5 2.5" stroke-linecap="round"/></svg>
-            <span>Search restaurant or dish…</span>
+            <input type="search" name="q" placeholder="Search restaurant or dish…" aria-label="Search query"/>
           </div>
-          <a href="#" class="hs-btn">Find food →</a>
-        </div>
+          <button type="submit" class="hs-btn">Find food →</button>
+        </form>
         <div class="hero-pills">
           <a href="#" class="hero-pill">🍔 Burgers</a>
           <a href="#" class="hero-pill">🍕 Pizza</a>
