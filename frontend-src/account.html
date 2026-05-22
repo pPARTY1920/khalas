@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zesto — Account Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./css/index.css" />
+  <style>
+    .settings-hero{padding:48px 0}
+    .settings-card{background:white;padding:20px;border-radius:12px;box-shadow:var(--shadow);max-width:720px}
+    .field{margin-bottom:12px}
+    .field label{display:block;font-weight:600;margin-bottom:6px}
+    .field input{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6e6}
+    .actions{display:flex;gap:12px;margin-top:16px}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M13 2L4 13h7l-1 9 10-12h-7l1-8z"/></svg></div>
+          <span class="logo-text">Zes<span>to</span></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero settings-hero">
+      <div class="container">
+        <div class="Breadcrumbs_wrapper__2deg2"> <a href="profile.html">Profile</a> &nbsp;›&nbsp; Account</div>
+        <div style="margin:16px 0 24px">
+          <a href="profile.html" class="btn btn-ghost" style="padding:10px 16px;display:inline-flex;align-items:center;gap:8px">← Back to profile</a>
+        </div>
+        <h1 class="hero-h1">Account settings</h1>
+        <p class="hero-sub">Update your name, email and phone number.</p>
+
+        <div class="settings-card">
+          <form id="account-form">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" value="John Doe" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" value="johndoe@example.com" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" value="+256 012 345678" />
+            </div>
+
+            <div class="actions">
+              <button type="button" class="btn btn-primary" onclick="save()">Save changes</button>
+              <a href="profile.html" class="btn btn-ghost">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function save(){
+      const btn = document.querySelector('.btn-primary');
+      btn.textContent = 'Saved';
+      setTimeout(()=> btn.textContent = 'Save changes',1500);
+    }
+  </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="f-brand">Zes<span>to</span></div>
+          <div class="f-tagline">Fast, reliable delivery across West Africa.</div>
+        </div>
+        <div>
+          <div class="fc-title">Company</div>
+          <div class="f-links">
+            <a href="#" class="f-link">About us</a>
+            <a href="#" class="f-link">Careers</a>
+            <a href="#" class="f-link">Press</a>
+          </div>
+        </div>
+        <div>
+          <div class="fc-title">Help</div>
+          <div class="f-links">
+            <a href="#" class="f-link">Help center</a>
+            <a href="#" class="f-link">Privacy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <span class="footer-copy">© 2026 Zesto Technologies Inc. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

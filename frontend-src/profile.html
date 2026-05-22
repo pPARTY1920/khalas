@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zesto — Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./css/index.css" />
+  <style>
+    .profile-hero{padding:48px 0 24px}
+    .profile-card{display:flex;gap:24px;align-items:center;background:white;padding:20px;border-radius:12px;box-shadow:var(--shadow)}
+    .profile-avatar{width:84px;height:84px;border-radius:50%;background:var(--or);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:28px}
+    .profile-actions{display:flex;gap:12px;margin-top:12px}
+    .profile-list{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .profile-tile{background:white;padding:16px;border-radius:12px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px}
+  </style>
+</head>
+<body>
+
+  <!-- reuse header markup/classes so styles stay consistent -->
+  <header class="nav">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M13 2L4 13h7l-1 9 10-12h-7l1-8z"/></svg></div>
+          <span class="logo-text">Zes<span>to</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="restaurant.html" class="nav-link">Restaurants</a>
+          <a href="#" class="nav-link">Contact</a>
+          <a href="#" class="nav-link">About us</a>
+        </div>
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-ghost">Sign in</a>
+          <a href="signin.html" class="btn btn-primary">Get started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero profile-hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-left">
+            <div class="section-label">Account</div>
+            <h1 class="hero-h1">Your profile</h1>
+            <p class="hero-sub">Manage your account, view orders, and update your details.</p>
+
+            <div class="profile-card">
+              <div class="profile-avatar">J</div>
+              <div>
+                <div style="font-weight:700;font-size:18px">John Doe</div>
+                <div style="color:var(--mid);margin-top:6px">johndoe@example.com • +256 012 345678</div>
+                <div class="profile-actions">
+                  <a href="order.html" class="btn btn-ghost">My orders</a>
+                  <a href="account.html" class="btn btn-primary">Edit account</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-list">
+              <div class="profile-tile">
+                <div style="font-size:22px">📦</div>
+                <div>
+                  <div style="font-weight:600">Past orders</div>
+                  <div style="color:var(--mid);font-size:13px">View your order history and receipts</div>
+                </div>
+              </div>
+              <div class="profile-tile">
+                <div style="font-size:22px">💳</div>
+                <div>
+                  <div style="font-weight:600">Payment methods</div>
+                  <div style="color:var(--mid);font-size:13px">Add or remove cards and mobile payments</div>
+                </div>
+              </div>
+              <div class="profile-tile">
+                <div style="font-size:22px">🏠</div>
+                <div>
+                  <div style="font-weight:600">Addresses</div>
+                  <div style="color:var(--mid);font-size:13px">Manage saved delivery addresses</div>
+                </div>
+              </div>
+              <div class="profile-tile">
+                <div style="font-size:22px">🔔</div>
+                <div>
+                  <div style="font-weight:600">Notifications</div>
+                  <div style="color:var(--mid);font-size:13px">Email and push preferences</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="f-brand">Zes<span>to</span></div>
+          <div class="f-tagline">Fast, reliable delivery across West Africa.</div>
+        </div>
+        <div>
+          <div class="fc-title">Company</div>
+          <div class="f-links">
+            <a href="#" class="f-link">About us</a>
+            <a href="#" class="f-link">Careers</a>
+            <a href="#" class="f-link">Press</a>
+          </div>
+        </div>
+        <div>
+          <div class="fc-title">Help</div>
+          <div class="f-links">
+            <a href="#" class="f-link">Help center</a>
+            <a href="#" class="f-link">Privacy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <span class="footer-copy">© 2026 Zesto Technologies Inc. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
