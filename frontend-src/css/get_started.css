@@ -1,0 +1,728 @@
+/* ── GET STARTED SPECIFIC ── */
+
+/* Full-page split layout */
+body { overflow-x: hidden; }
+
+.gs-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 520px;
+}
+
+/* ── LEFT PANEL (visual) ── */
+.gs-left {
+  background: var(--dk);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background dots */
+.gs-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,85,0,.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+/* Orange glow */
+.gs-left::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,85,0,.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.gs-left-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.gs-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.gs-logo .logo-mark {
+  width: 36px; height: 36px;
+  background: var(--or);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.gs-logo .logo-mark svg { width: 20px; height: 20px; fill: white; }
+.gs-logo .logo-text {
+  font-family: 'Knewave', cursive;
+  font-size: 26px;
+  color: white;
+  letter-spacing: 1px;
+}
+.gs-logo .logo-text span { color: var(--or); }
+
+.gs-signin-link {
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
+}
+.gs-signin-link a {
+  color: var(--or);
+  font-weight: 600;
+  text-decoration: none;
+}
+.gs-signin-link a:hover { text-decoration: underline; }
+
+/* Left content */
+.gs-left-content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gs-left-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--or);
+  margin-bottom: 14px;
+}
+
+.gs-left-h1 {
+  font-family: 'Knewave', cursive;
+  font-size: clamp(32px, 4vw, 56px);
+  color: white;
+  line-height: 1.05;
+  letter-spacing: -.5px;
+  margin-bottom: 18px;
+}
+
+.gs-left-h1 span { color: var(--or); }
+
+.gs-left-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,.5);
+  line-height: 1.65;
+  max-width: 380px;
+  margin-bottom: 40px;
+}
+
+/* Benefit cards */
+.gs-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 48px;
+}
+
+.gs-benefit {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.gs-benefit-ico {
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.gs-benefit-ico svg { width: 18px; height: 18px; color: var(--or); }
+
+.gs-benefit-text {}
+.gs-benefit-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2px;
+}
+.gs-benefit-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+}
+
+/* Promo code pill */
+.gs-promo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,85,0,.15);
+  border: 1.5px dashed rgba(255,85,0,.4);
+  border-radius: var(--r12);
+  padding: 12px 18px;
+  width: fit-content;
+}
+
+.gs-promo-emoji { font-size: 18px; }
+.gs-promo-text {}
+.gs-promo-label { font-size: 10px; color: rgba(255,255,255,.4); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; }
+.gs-promo-code { font-size: 16px; font-weight: 800; color: var(--or); letter-spacing: 2px; }
+
+/* Social proof */
+.gs-social-proof {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.gs-avatars {
+  display: flex;
+}
+
+.gs-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--dk);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  margin-left: -8px;
+}
+
+.gs-avatars .gs-avatar:first-child { margin-left: 0; }
+
+.gs-proof-text {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.5;
+}
+
+.gs-proof-text strong { color: white; }
+
+/* ── RIGHT PANEL (form) ── */
+.gs-right {
+  background: var(--wh);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 48px;
+  overflow-y: auto;
+  border-left: 1px solid var(--lt2);
+}
+
+/* Stepper */
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-circle {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: all .3s;
+}
+
+.step.done .step-circle { background: var(--or); color: white; }
+.step.active .step-circle { background: var(--dk); color: white; }
+.step.pending .step-circle { background: var(--lt); color: var(--mid); border: 1.5px solid var(--lt2); }
+
+.step-label {
+  font-size: 12px;
+  font-weight: 600;
+  transition: color .3s;
+}
+
+.step.done .step-label { color: var(--or); }
+.step.active .step-label { color: var(--dk); }
+.step.pending .step-label { color: var(--mid); }
+
+.step-line {
+  flex: 1;
+  height: 2px;
+  background: var(--lt2);
+  margin: 0 8px;
+  border-radius: 2px;
+  transition: background .3s;
+}
+
+.step-line.done { background: var(--or); }
+
+/* Panel title */
+.gs-panel-title {
+  font-family: 'Knewave', cursive;
+  font-size: 28px;
+  color: var(--dk);
+  margin-bottom: 6px;
+  letter-spacing: -.3px;
+}
+
+.gs-panel-sub {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* ── STEP 1: Role cards ── */
+.role-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.role-card {
+  background: var(--lt);
+  border: 2px solid transparent;
+  border-radius: var(--r20);
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all .2s;
+  position: relative;
+}
+
+.role-card:hover {
+  border-color: var(--or-mid);
+  background: var(--or-lt);
+  transform: translateX(4px);
+}
+
+.role-card.selected {
+  border-color: var(--or);
+  background: var(--or-lt);
+  box-shadow: 0 0 0 4px rgba(255,85,0,.08);
+}
+
+.role-emoji {
+  font-size: 36px;
+  width: 60px; height: 60px;
+  background: white;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow);
+}
+
+.role-info { flex: 1; }
+
+.role-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dk);
+  margin-bottom: 4px;
+}
+
+.role-desc {
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.5;
+}
+
+.role-badge {
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--or);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 100px;
+  position: absolute;
+  top: 14px; right: 14px;
+}
+
+.role-check {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--lt2);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: all .2s;
+}
+
+.role-card.selected .role-check {
+  background: var(--or);
+  border-color: var(--or);
+}
+
+.role-check svg {
+  width: 11px; height: 11px;
+  color: white;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.role-card.selected .role-check svg { opacity: 1; }
+
+/* ── STEP 2: Sign up form ── */
+.gs-form { display: flex; flex-direction: column; gap: 16px; }
+
+.gs-oauth-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.oauth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: white;
+  border: 1.5px solid var(--lt2);
+  border-radius: var(--r12);
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dk);
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: all .18s;
+  text-decoration: none;
+}
+
+.oauth-btn:hover {
+  border-color: var(--mid);
+  background: var(--lt);
+}
+
+.oauth-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--mid);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--lt2);
+}
+
+.gs-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gs-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dk);
+}
+
+.gs-label span { color: var(--or); }
+
+.gs-input {
+  width: 100%;
+  height: 48px;
+  background: var(--lt);
+  border: 1.5px solid var(--lt2);
+  border-radius: var(--r12);
+  padding: 0 16px;
+  font-size: 14px;
+  color: var(--dk);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: border-color .18s, background .18s, box-shadow .18s;
+  outline: none;
+}
+
+.gs-input:focus {
+  border-color: var(--or);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255,85,0,.08);
+}
+
+.gs-input::placeholder { color: #C0B8B0; }
+
+.gs-input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gs-input-icon {
+  position: relative;
+}
+
+.gs-input-icon .gs-input { padding-right: 44px; }
+
+.gs-input-icon-btn {
+  position: absolute;
+  right: 14px; top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--mid);
+  display: flex; align-items: center;
+}
+
+.gs-input-icon-btn svg { width: 16px; height: 16px; }
+
+.gs-hint { font-size: 11px; color: var(--mid); margin-top: 2px; }
+
+.password-strength {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.ps-bar {
+  flex: 1;
+  height: 3px;
+  background: var(--lt2);
+  border-radius: 2px;
+  transition: background .3s;
+}
+
+.ps-bar.weak { background: #EF4444; }
+.ps-bar.medium { background: #F59E0B; }
+.ps-bar.strong { background: #22C55E; }
+
+.gs-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.gs-checkbox input[type="checkbox"] {
+  width: 18px; height: 18px;
+  accent-color: var(--or);
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+.gs-checkbox-label {
+  font-size: 12px;
+  color: var(--mid);
+  line-height: 1.5;
+}
+
+.gs-checkbox-label a { color: var(--or); font-weight: 600; }
+
+/* Primary action button */
+.gs-btn-primary {
+  width: 100%;
+  height: 52px;
+  background: var(--or);
+  color: white;
+  border: none;
+  border-radius: var(--r12);
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  cursor: pointer;
+  transition: background .18s, transform .18s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+
+.gs-btn-primary:hover { background: var(--or-dk); transform: translateY(-1px); }
+.gs-btn-primary:disabled { background: var(--lt2); color: var(--mid); cursor: not-allowed; transform: none; }
+.gs-btn-primary svg { width: 18px; height: 18px; }
+
+.gs-btn-secondary {
+  width: 100%;
+  height: 48px;
+  background: transparent;
+  color: var(--mid);
+  border: 1.5px solid var(--lt2);
+  border-radius: var(--r12);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  cursor: pointer;
+  transition: all .18s;
+}
+
+.gs-btn-secondary:hover { border-color: var(--mid); color: var(--dk); background: var(--lt); }
+
+/* ── STEP 3: Confirmation ── */
+.step3-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.step3-icon {
+  width: 80px; height: 80px;
+  background: var(--or);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 32px rgba(255,85,0,.3);
+}
+
+.step3-icon svg { width: 38px; height: 38px; color: white; }
+
+.step3-title {
+  font-family: 'Knewave', cursive;
+  font-size: 28px;
+  color: var(--dk);
+}
+
+.step3-sub {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.65;
+  max-width: 320px;
+}
+
+.step3-perks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.perk-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--lt);
+  border-radius: var(--r12);
+  padding: 12px 16px;
+}
+
+.perk-ico { font-size: 22px; flex-shrink: 0; }
+
+.perk-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dk);
+}
+
+.perk-sub {
+  font-size: 11px;
+  color: var(--mid);
+  margin-top: 2px;
+}
+
+.step3-promo {
+  width: 100%;
+  background: var(--or-lt);
+  border: 2px dashed var(--or-mid);
+  border-radius: var(--r12);
+  padding: 16px;
+  text-align: center;
+}
+
+.step3-promo-label {
+  font-size: 11px;
+  color: var(--mid);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.step3-promo-code {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--or);
+  letter-spacing: 3px;
+}
+
+.step3-promo-sub {
+  font-size: 11px;
+  color: var(--mid);
+  margin-top: 4px;
+}
+
+/* Step visibility */
+.gs-step { display: none; }
+.gs-step.active { display: block; }
+
+/* Back button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mid);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 0;
+  margin-bottom: 24px;
+  transition: color .18s;
+}
+
+.back-btn:hover { color: var(--dk); }
+.back-btn svg { width: 16px; height: 16px; }
+
+/* Selected role chip */
+.selected-role-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--or-lt);
+  border: 1.5px solid var(--or-mid);
+  border-radius: var(--r50);
+  padding: 5px 14px 5px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--or);
+  margin-bottom: 20px;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px) {
+  .gs-page { grid-template-columns: 1fr; }
+  .gs-left { display: none; }
+  .gs-right { padding: 32px 28px; min-height: 100vh; }
+  /* Show mini nav on mobile */
+  .gs-mobile-nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+}
+
+@media(max-width:480px) {
+  .gs-right { padding: 24px 20px; }
+  .gs-oauth-btns { grid-template-columns: 1fr; }
+  .gs-input-row { grid-template-columns: 1fr; }
+}
+
+.gs-mobile-nav { display: none; }
